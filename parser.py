@@ -161,7 +161,7 @@ def save_to_excel(exhibition_name, companies_data):
     os.makedirs('excel', exist_ok=True)
     
     # Save to Excel
-    filename = f'excel/участники выставки {exhibition_name}.xlsx'
+    filename = os.path.join('excel', f'участники выставки {exhibition_name}.xlsx')
     
     # Create Excel writer object
     with pd.ExcelWriter(filename, engine='openpyxl') as writer:
