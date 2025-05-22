@@ -1,6 +1,8 @@
 name: Expo Parser
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"  # Автозапуск каждый день в 08:00 UTC
 
 jobs:
   parse-exhibitions:
