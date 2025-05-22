@@ -20,6 +20,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Debug files
+      run: |
+        ls -la
+        cat requirements.txt
+
     - name: Run parser
       run: python parser.py
 
