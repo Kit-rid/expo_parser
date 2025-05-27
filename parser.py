@@ -75,7 +75,7 @@ def get_table_links(url, headers):
         # for row in table_rows:
 
         # Limit to first 10 companies for testing
-        for row in table_rows[:30]:
+        for row in table_rows:
             # Get the first td element in the row
             first_td = row.find('td')
             if first_td:
@@ -131,7 +131,7 @@ def get_exhibition_links(url, headers):
                 })
                 events_found += 1
                 # Take only first two exhibitions for testing
-                if events_found >= 3:
+                if events_found >= 15:
                     break
         
         return results
